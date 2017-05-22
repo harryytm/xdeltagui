@@ -1,0 +1,10 @@
+D:\Users\Family User\Documents\Visual Studio 2008\Projects\Xdelta3 GUI\Xdelta3 GUI\bin\Debug\Xdelta3 GUI.exe
+D:\Users\Family User\Documents\Visual Studio 2008\Projects\Xdelta3 GUI\Xdelta3 GUI\bin\Debug\Xdelta3 GUI.pdb
+D:\Users\Family User\Documents\Visual Studio 2008\Projects\Xdelta3 GUI\Xdelta3 GUI\bin\Debug\Xdelta3 GUI.xml
+D:\Users\Family User\Documents\Visual Studio 2008\Projects\Xdelta3 GUI\Xdelta3 GUI\obj\Debug\Xdelta3_GUI.Resources.resources
+D:\Users\Family User\Documents\Visual Studio 2008\Projects\Xdelta3 GUI\Xdelta3 GUI\obj\Debug\Xdelta3 GUI.vbproj.GenerateResource.Cache
+D:\Users\Family User\Documents\Visual Studio 2008\Projects\Xdelta3 GUI\Xdelta3 GUI\obj\Debug\Xdelta3 GUI.exe
+D:\Users\Family User\Documents\Visual Studio 2008\Projects\Xdelta3 GUI\Xdelta3 GUI\obj\Debug\Xdelta3 GUI.xml
+D:\Users\Family User\Documents\Visual Studio 2008\Projects\Xdelta3 GUI\Xdelta3 GUI\obj\Debug\Xdelta3 GUI.pdb
+D:\Users\Family User\Documents\Visual Studio 2008\Projects\Xdelta3 GUI\Xdelta3 GUI\obj\Debug\Xdelta3_GUI.PatchUI.resources
+D:\Users\Family User\Documents\Visual Studio 2008\Projects\Xdelta3 GUI\Xdelta3 GUI\obj\Debug\Xdelta3 GUI.vbprojResolveAssemblyReference.cache
