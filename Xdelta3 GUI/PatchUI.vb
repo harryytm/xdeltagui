@@ -30,7 +30,7 @@ Public Class PatchUI
         If txtTextOutput.Text.StartsWith("xdelta3:") Or txtTextOutput.Text.StartsWith("VCDIFF") Then
             If txtTextOutput.Text.StartsWith("xdelta3: source ") Then
                 InputSize = txtTextOutput.Text.Substring(txtTextOutput.Text.IndexOf("[") + 1, txtTextOutput.Text.IndexOf("]") - txtTextOutput.Text.IndexOf("[") - 1)
-                Label1.Text = "Source File Size: " & InputSize & " Byte"
+                lblSourceFile.Text = "Source File Size: " & InputSize & " Byte"
             End If
 
             Dim WinSizePhase As String = "VCDIFF target window length:"
@@ -40,8 +40,8 @@ Public Class PatchUI
                 varProgress = 0
                 CurrentBlock = 0
                 WinSize = txtTextOutput.Text.Substring(WinSizePhase.Length).Trim
-                Label1.Text = "Source File Size: Unknown"
-                Label2.Text = "Input Window Size: " & WinSize / 1024 & " KB"
+                lblSourceFile.Text = "Source File Size: Unknown"
+                lblInputWinSize.Text = "Input Window Size: " & WinSize / 1024 & " KB"
             End If
 
             Dim CurrentBlockPhase As String = "xdelta3: "
@@ -60,10 +60,10 @@ Public Class PatchUI
                 ProgressBar1.Value = CurrentBlock / varProgress * 10000
                 'ProgressBar1.CreateGraphics().DrawString(Math.Round(CurrentBlock / varProgress * 100, 0) & "%", New Font("Arial", 8.25, FontStyle.Regular), Brushes.Black, New PointF(ProgressBar1.Width / 2 - 10, ProgressBar1.Height / 2 - 7))
 
-                Label3.Text = "Progress: " & Math.Round(CurrentBlock / varProgress * 100, 0) & "%"
+                lblProgress.Text = "Progress: " & Math.Round(CurrentBlock / varProgress * 100, 0) & "%"
             Else
                 'ProgressBar1.CreateGraphics().DrawString("0%", New Font("Arial", 8.25, FontStyle.Regular), Brushes.Black, New PointF(ProgressBar1.Width / 2 - 10, ProgressBar1.Height / 2 - 7))
-                Label3.Text = "Progress: Unknown"
+                lblProgress.Text = "Progress: Unknown"
                 ProgressBar1.Value = 0
             End If
         End If
@@ -164,6 +164,7 @@ Public Class PatchUI
         ReadHeader(SelectOutput.FileName)
     End Sub
 
+    'Read the header of the diff file before applying the patch
     Private Sub ReadHeader(ByVal DiffFile As String)
         proc_ReadHdr = New Process
         With proc_ReadHdr
@@ -272,6 +273,7 @@ Public Class PatchUI
         varMemory = 2147483648
     End Sub
 
+    'Let user to select the patch script
     Private Sub btnLoadScript_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnLoadScript.Click
         With SelectScript
             .Title = "Load script file"
@@ -295,7 +297,9 @@ Public Class PatchUI
         Else
             If Not CurrentTask > TotalTask Then
                 If strLineStream(CurrentTask).indexof(",") > 0 Then
+                    'For debugging
                     'MsgBox("Source: " + strLineStream(CurrentTask).split(",")(0).trim() + Chr(13) + "Source: " + strLineStream(CurrentTask).split(",")(1).trim() + Chr(13) + "Source: " + strLineStream(CurrentTask).split(",")(2).trim())
+                    ''Format of the patch script: [Source file], [Diff file], [Output file]
                     lblSource.Text = strLineStream(CurrentTask).split(",")(0).trim()
                     lblPatch.Text = strLineStream(CurrentTask).split(",")(1).trim()
                     lblOutput.Text = strLineStream(CurrentTask).split(",")(2).trim()

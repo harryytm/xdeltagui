@@ -22,32 +22,32 @@ Partial Class PatchUI
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container
-        Me.txtTextOutput = New System.Windows.Forms.TextBox
-        Me.Label1 = New System.Windows.Forms.Label
-        Me.Label2 = New System.Windows.Forms.Label
-        Me.Label3 = New System.Windows.Forms.Label
-        Me.ProgressBar1 = New System.Windows.Forms.ProgressBar
-        Me.OutputTextBox = New System.Windows.Forms.TextBox
-        Me.btnStop = New System.Windows.Forms.Button
-        Me.btnStart = New System.Windows.Forms.Button
-        Me.btnSelectDiff = New System.Windows.Forms.Button
-        Me.txtDiff = New System.Windows.Forms.TextBox
-        Me.txtSource = New System.Windows.Forms.TextBox
-        Me.txtOutput = New System.Windows.Forms.TextBox
-        Me.btnSource = New System.Windows.Forms.Button
-        Me.btnOut = New System.Windows.Forms.Button
+        Me.components = New System.ComponentModel.Container()
+        Me.txtTextOutput = New System.Windows.Forms.TextBox()
+        Me.lblSourceFile = New System.Windows.Forms.Label()
+        Me.lblInputWinSize = New System.Windows.Forms.Label()
+        Me.lblProgress = New System.Windows.Forms.Label()
+        Me.ProgressBar1 = New System.Windows.Forms.ProgressBar()
+        Me.OutputTextBox = New System.Windows.Forms.TextBox()
+        Me.btnStop = New System.Windows.Forms.Button()
+        Me.btnStart = New System.Windows.Forms.Button()
+        Me.btnSelectDiff = New System.Windows.Forms.Button()
+        Me.txtDiff = New System.Windows.Forms.TextBox()
+        Me.txtSource = New System.Windows.Forms.TextBox()
+        Me.txtOutput = New System.Windows.Forms.TextBox()
+        Me.btnSource = New System.Windows.Forms.Button()
+        Me.btnOut = New System.Windows.Forms.Button()
         Me.CheckExitTimer = New System.Windows.Forms.Timer(Me.components)
-        Me.lblTime = New System.Windows.Forms.Label
-        Me.mem_default = New System.Windows.Forms.RadioButton
-        Me.mem_1GB = New System.Windows.Forms.RadioButton
-        Me.mem_2GB = New System.Windows.Forms.RadioButton
-        Me.gp_mem = New System.Windows.Forms.GroupBox
-        Me.btnLoadScript = New System.Windows.Forms.Button
-        Me.lblSource = New System.Windows.Forms.Label
-        Me.lblPatch = New System.Windows.Forms.Label
-        Me.lblOutput = New System.Windows.Forms.Label
-        Me.btnHashCheck = New System.Windows.Forms.Button
+        Me.lblTime = New System.Windows.Forms.Label()
+        Me.mem_default = New System.Windows.Forms.RadioButton()
+        Me.mem_1GB = New System.Windows.Forms.RadioButton()
+        Me.mem_2GB = New System.Windows.Forms.RadioButton()
+        Me.gp_mem = New System.Windows.Forms.GroupBox()
+        Me.btnLoadScript = New System.Windows.Forms.Button()
+        Me.lblSource = New System.Windows.Forms.Label()
+        Me.lblPatch = New System.Windows.Forms.Label()
+        Me.lblOutput = New System.Windows.Forms.Label()
+        Me.btnHashCheck = New System.Windows.Forms.Button()
         Me.gp_mem.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -60,33 +60,33 @@ Partial Class PatchUI
         Me.txtTextOutput.TabIndex = 0
         Me.txtTextOutput.TabStop = False
         '
-        'Label1
+        'lblSourceFile
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(9, 6)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(86, 13)
-        Me.Label1.TabIndex = 2
-        Me.Label1.Text = "Source File Size:"
+        Me.lblSourceFile.AutoSize = True
+        Me.lblSourceFile.Location = New System.Drawing.Point(9, 6)
+        Me.lblSourceFile.Name = "lblSourceFile"
+        Me.lblSourceFile.Size = New System.Drawing.Size(86, 13)
+        Me.lblSourceFile.TabIndex = 2
+        Me.lblSourceFile.Text = "Source File Size:"
         '
-        'Label2
+        'lblInputWinSize
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(9, 19)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(102, 13)
-        Me.Label2.TabIndex = 3
-        Me.Label2.Text = "Input Window Size: "
+        Me.lblInputWinSize.AutoSize = True
+        Me.lblInputWinSize.Location = New System.Drawing.Point(9, 19)
+        Me.lblInputWinSize.Name = "lblInputWinSize"
+        Me.lblInputWinSize.Size = New System.Drawing.Size(102, 13)
+        Me.lblInputWinSize.TabIndex = 3
+        Me.lblInputWinSize.Text = "Input Window Size: "
         '
-        'Label3
+        'lblProgress
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.BackColor = System.Drawing.Color.Transparent
-        Me.Label3.Location = New System.Drawing.Point(9, 32)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(51, 13)
-        Me.Label3.TabIndex = 4
-        Me.Label3.Text = "Progress:"
+        Me.lblProgress.AutoSize = True
+        Me.lblProgress.BackColor = System.Drawing.Color.Transparent
+        Me.lblProgress.Location = New System.Drawing.Point(9, 32)
+        Me.lblProgress.Name = "lblProgress"
+        Me.lblProgress.Size = New System.Drawing.Size(51, 13)
+        Me.lblProgress.TabIndex = 4
+        Me.lblProgress.Text = "Progress:"
         '
         'ProgressBar1
         '
@@ -303,11 +303,11 @@ Partial Class PatchUI
         Me.Controls.Add(Me.btnSelectDiff)
         Me.Controls.Add(Me.btnStart)
         Me.Controls.Add(Me.btnStop)
-        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.lblProgress)
         Me.Controls.Add(Me.OutputTextBox)
         Me.Controls.Add(Me.ProgressBar1)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.lblInputWinSize)
+        Me.Controls.Add(Me.lblSourceFile)
         Me.Controls.Add(Me.txtTextOutput)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.MaximizeBox = False
@@ -321,9 +321,9 @@ Partial Class PatchUI
 
     End Sub
     Friend WithEvents txtTextOutput As System.Windows.Forms.TextBox
-    Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents Label2 As System.Windows.Forms.Label
-    Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents lblSourceFile As System.Windows.Forms.Label
+    Friend WithEvents lblInputWinSize As System.Windows.Forms.Label
+    Friend WithEvents lblProgress As System.Windows.Forms.Label
     Friend WithEvents ProgressBar1 As System.Windows.Forms.ProgressBar
     Friend WithEvents OutputTextBox As System.Windows.Forms.TextBox
     Friend WithEvents btnStop As System.Windows.Forms.Button
