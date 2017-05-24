@@ -1,3 +1,3 @@
 # xdeltagui
 
-Just an GUI written in Visual Basic just for fun.
+Just an GUI for Xdelta to have patching progress, written in Visual Basic just for fun.
